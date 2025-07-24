@@ -1,0 +1,6 @@
+@Basarsoft_Clean_HostAddress = http://localhost:5287
+
+GET {{Basarsoft_Clean_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
