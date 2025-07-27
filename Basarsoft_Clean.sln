@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basarsoft_Clean", "Basarsoft_Clean\Basarsoft_Clean.csproj", "{F08FD667-071C-468C-8FF7-AE43C7E39DAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapViewer", "MapViewer\MapViewer.csproj", "{EA380331-7050-4247-93A5-D17CCF9254E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F08FD667-071C-468C-8FF7-AE43C7E39DAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F08FD667-071C-468C-8FF7-AE43C7E39DAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F08FD667-071C-468C-8FF7-AE43C7E39DAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA380331-7050-4247-93A5-D17CCF9254E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA380331-7050-4247-93A5-D17CCF9254E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA380331-7050-4247-93A5-D17CCF9254E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA380331-7050-4247-93A5-D17CCF9254E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

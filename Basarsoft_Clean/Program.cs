@@ -1,4 +1,4 @@
-using Basarsoft_Clean.DAL;
+﻿using Basarsoft_Clean.DAL;
 using Basarsoft_Clean.DAL.Repositories;
 using Basarsoft_Clean.Services;
 using Microsoft.EntityFrameworkCore;
@@ -18,6 +18,18 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddDbContext<FeatureDb>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"),
         x => x.UseNetTopologySuite()));
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: "AllowAllOrigins", // Politika adı
+                      builder =>
+                      {
+                          // Bu sadece geliştirme içindir, üretimde belirli origin'leri belirtin!
+                          builder.AllowAnyOrigin()
+                                 .AllowAnyHeader()
+                                 .AllowAnyMethod();
+                      });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -30,6 +42,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseCors("AllowAllOrigins");
 
 app.MapControllers();
 
