@@ -140,10 +140,9 @@ saveFeatureBtn.onclick = async function () {
 
     const geometry = currentDrawnFeature.getGeometry();
 
-    // EPSG dönüşümünü yaparak WKT oluştur
     const wktString = wktFormat.writeGeometry(geometry, {
         dataProjection: 'EPSG:4326',
-        featureProjection: 'EPSG:3857'
+        featureProjection: 'EPSG:4326'
     });
 
     try {
@@ -164,10 +163,8 @@ saveFeatureBtn.onclick = async function () {
 
         const result = await response.json();
 
-        // API'den dönen ID’yi feature'a ata
         currentDrawnFeature.set('id', result.data?.id || null);
 
-        // drawLayer'dan kaldır, kalıcı katmana ekle
         drawSource.removeFeature(currentDrawnFeature);
         apiVectorSource.addFeature(currentDrawnFeature);
 
@@ -177,7 +174,7 @@ saveFeatureBtn.onclick = async function () {
         alert('Sunucuya kayıt sırasında bir hata oluştu.');
     }
 
-    // Popup'ı kapat ve varsayılan duruma dön
+    
     overlay.setPosition(undefined);
     currentDrawnFeature = null;
     addGeneralInteractions();

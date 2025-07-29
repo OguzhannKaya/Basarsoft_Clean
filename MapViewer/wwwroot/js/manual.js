@@ -11,7 +11,7 @@ const wktFormat = new WKT();
 async function addManualDrawing() {
     const drawType = manualDrawTypeSelect.value;
     const coordsText = manualCoordsInput.value.trim();
-    const featureName = manualFeatureNameInput.value.trim() || 'Manuel Çizim';
+    const featureName = manualFeatureNameInput.value.trim() || `Çizim-${new Date().toLocaleString('tr-TR')}`;
 
     if (!coordsText) {
         alert('Lütfen koordinat veya WKT verisi girin.');
@@ -31,7 +31,7 @@ async function addManualDrawing() {
                 const lat = parseFloat(match[3]);
                 geometry = wktFormat.readGeometry(`POINT(${lon} ${lat})`, {
                     dataProjection: 'EPSG:4326',
-                    featureProjection: 'EPSG:3857'
+                    featureProjection: 'EPSG:4326'
                 });
             } else {
                 throw new Error('Geçersiz Point WKT formatı. Örn: POINT(boylam enlem)');
@@ -42,7 +42,7 @@ async function addManualDrawing() {
             }
             geometry = wktFormat.readGeometry(coordsText, {
                 dataProjection: 'EPSG:4326',
-                featureProjection: 'EPSG:3857'
+                featureProjection: 'EPSG:4326'
             });
             if (geometry.getType().toUpperCase() !== 'LINESTRING') {
                 throw new Error(`Girilen WKT tipi (${geometry.getType()}) seçilen çizim tipi (LineString) ile eşleşmiyor.`);
@@ -53,7 +53,7 @@ async function addManualDrawing() {
             }
             geometry = wktFormat.readGeometry(coordsText, {
                 dataProjection: 'EPSG:4326',
-                featureProjection: 'EPSG:3857'
+                featureProjection: 'EPSG:4326'
             });
             if (geometry.getType().toUpperCase() !== 'POLYGON') {
                 throw new Error(`Girilen WKT tipi (${geometry.getType()}) seçilen çizim tipi (Polygon) ile eşleşmiyor.`);
@@ -70,7 +70,7 @@ async function addManualDrawing() {
 
         const wktStringForApi = wktFormat.writeGeometry(geometry, {
             dataProjection: 'EPSG:4326',
-            featureProjection: 'EPSG:3857'
+            featureProjection: 'EPSG:4326'
         });
 
         const featureDataToSend = {

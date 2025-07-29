@@ -9,19 +9,24 @@ import Style from 'https://cdn.skypack.dev/ol/style/Style';
 import Stroke from 'https://cdn.skypack.dev/ol/style/Stroke';
 import Fill from 'https://cdn.skypack.dev/ol/style/Fill';
 import Circle from 'https://cdn.skypack.dev/ol/style/Circle';
-import { fromLonLat } from 'https://cdn.skypack.dev/ol/proj';
+import { Projection } from 'https://cdn.skypack.dev/ol/proj';
 
 export const map = new Map({
     target: 'map',
     layers: [
         new TileLayer({
-            source: new OSM()
+            source: new OSM(),
+            //extent: [-180, -90, 180, 90]
         })
     ],
     view: new View({
-        center: fromLonLat([32.8597, 39.9334]),
+        center: [32.8597, 39.9334],
         zoom: 10,
-        //projection: new Projection({ code: 'EPSG:4326', 'units': 'degrees' })
+        projection: new Projection({
+            code: "EPSG:4326",
+            units: "degrees"
+        }),
+        extent: [-180, -90, 180, 90],
     })
 });
 
@@ -91,7 +96,7 @@ export const apiVectorLayer = new VectorLayer({
                     break;
                 default:
                     style = new Style({
-                        fill: new ol.Fill({
+                        fill: new Fill({
                             color: 'rgba(200, 200, 200, 0.6)'
                         }),
                         stroke: new Stroke({

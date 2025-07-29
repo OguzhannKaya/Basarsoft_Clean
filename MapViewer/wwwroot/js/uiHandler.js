@@ -115,10 +115,12 @@ function handleUpdateFeature(featureId) {
         const centerCoord = getCenter(extent);
 
         map.getView().fit(extent, {
-            duration: 500,
-            maxZoom: 18,
+            duration: 1000,
+            maxZoom: 14,
             padding: [100, 100, 100, 100]
         });
+
+        console.log(extent);
 
         overlay.setPosition(centerCoord);
         document.getElementById('popup').style.display = 'block';

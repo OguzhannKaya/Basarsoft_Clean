@@ -54,7 +54,7 @@ export async function loadApiData(pageNumber = 1) {
 
                 const geometry = wktFormat.readGeometry(wktData, {
                     dataProjection: 'EPSG:4326',
-                    featureProjection: 'EPSG:3857'
+                    featureProjection: 'EPSG:4326'
                 });
 
                 const feature = new Feature({
@@ -123,7 +123,7 @@ export async function saveFeature() {
 
     const wktString = wktFormat.writeFeature(featureToProcess, {
         dataProjection: 'EPSG:4326',
-        featureProjection: 'EPSG:3857'
+        featureProjection: 'EPSG:4326'
     });
 
     const featureDataToSend = {
