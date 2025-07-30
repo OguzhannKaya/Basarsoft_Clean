@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace Basarsoft_Clean.DAL
+namespace API.DAL
 {
     public class FeatureDb : DbContext
     {

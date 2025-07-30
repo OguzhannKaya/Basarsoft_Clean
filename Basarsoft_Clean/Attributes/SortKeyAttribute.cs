@@ -1,4 +1,4 @@
-﻿namespace Basarsoft_Clean.Attributes
+﻿namespace API.Attributes
 {
     public class SortKeyAttribute : Attribute
     {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Storage;
 
-namespace Basarsoft_Clean.DAL.Repositories
+namespace API.DAL.Repositories
 {
     public interface IUnitOfWork : IDisposable
     {

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basarsoft_Clean", "Basarsoft_Clean\Basarsoft_Clean.csproj", "{F08FD667-071C-468C-8FF7-AE43C7E39DAF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "Basarsoft_Clean\API.csproj", "{F08FD667-071C-468C-8FF7-AE43C7E39DAF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapViewer", "MapViewer\MapViewer.csproj", "{EA380331-7050-4247-93A5-D17CCF9254E5}"
 EndProject

@@ -1,11 +1,11 @@
-﻿using Basarsoft_Clean.Attributes;
+﻿using API.Attributes;
 using Microsoft.AspNetCore.Mvc;
 using NetTopologySuite.Geometries;
 using NetTopologySuite.IO;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
-namespace Basarsoft_Clean.DAL
+namespace API.DAL
 {
     public class Feature
     {

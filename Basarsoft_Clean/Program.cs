@@ -1,6 +1,6 @@
-﻿using Basarsoft_Clean.DAL;
-using Basarsoft_Clean.DAL.Repositories;
-using Basarsoft_Clean.Services;
+﻿using API.DAL;
+using API.DAL.Repositories;
+using API.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 

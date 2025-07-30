@@ -10,7 +10,7 @@ import { getCurrentEditFeature, setCurrentEditFeature, addInteractions, setModif
 
 const wktFormat = new WKT();
 
-// Göster/Gizle butonu mantığı
+// Göster/Gizle butonu 
 let isApiDataVisible = true;
 
 document.addEventListener('DOMContentLoaded', () => {

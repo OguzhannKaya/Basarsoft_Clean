@@ -1,9 +1,9 @@
-﻿using Basarsoft_Clean.Attributes;
+﻿using API.Attributes;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 using System.Linq.Expressions;
 
-namespace Basarsoft_Clean.DAL.Repositories
+namespace API.DAL.Repositories
 {
     public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {

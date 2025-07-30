@@ -16,7 +16,6 @@ export const map = new Map({
     layers: [
         new TileLayer({
             source: new OSM(),
-            //extent: [-180, -90, 180, 90]
         })
     ],
     view: new View({

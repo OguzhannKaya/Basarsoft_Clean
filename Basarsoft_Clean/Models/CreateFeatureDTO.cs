@@ -1,7 +1,7 @@
-﻿using Basarsoft_Clean.Attributes.Validation;
+﻿using API.Attributes.Validation;
 using System.ComponentModel.DataAnnotations;
 
-namespace Basarsoft_Clean.Models
+namespace API.Models
 {
     public class CreateFeatureDTO
     {

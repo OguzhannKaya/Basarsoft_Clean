@@ -1,7 +1,7 @@
 ﻿using NetTopologySuite.IO;
 using System.ComponentModel.DataAnnotations;
 
-namespace Basarsoft_Clean.Attributes.Validation
+namespace API.Attributes.Validation
 {
     public class ValidWKTAttribute : ValidationAttribute
     {

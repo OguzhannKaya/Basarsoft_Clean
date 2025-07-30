@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Versioning;
 
-namespace Basarsoft_Clean.Helpers
+namespace API.Helpers
 {
     public class ResourceHelper
     {

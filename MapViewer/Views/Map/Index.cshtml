@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-pap7OrVXYP7kqAl5A...==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
@@ -23,8 +24,12 @@
                 <option value="LineString">Çizgi</option>
                 <option value="Polygon">Poligon</option>
             </select>
-            <button id="undo">Geri Al</button>
-            <button id="toggleApiDataBtn">API Verilerini Gizle/Göster</button>
+            <button id="undo">
+                <i class="fa-solid fa-rotate-left"></i> Geri Al
+            </button>
+            <button id="toggleApiDataBtn">
+                <i class="fa-solid fa-database"></i> API Verilerini Gizle/Göster
+            </button>
         </div>
 
         <div id="popup" class="ol-popup">
@@ -32,7 +37,9 @@
             <div class="popup-content">
                 <label for="featureName">Özellik Adı:</label>
                 <input type="text" id="featureName" placeholder="Özellik adını girin" />
-                <button id="saveFeatureBtn">Kaydet</button>
+                <button id="saveFeatureBtn">
+                    <i class="fa-solid fa-floppy-disk"></i> Kaydet
+                </button>
             </div>
         </div>
 
@@ -56,7 +63,9 @@
                 <input type="text" id="manualFeatureName" placeholder="Özellik adı">
             </div>
 
-            <button id="addManualDrawing">Ekle</button>
+            <button id="addManualDrawing">
+                <i class="fa-solid fa-plus"></i> Ekle
+            </button>
         </div>
 
         <div id="api-data-scroll-container">
@@ -65,9 +74,13 @@
         </div>
 
         <div id="pagination-controls">
-            <button id="prevPageBtn">Önceki</button>
+            <button id="prevPageBtn">
+                <i class="fa-solid fa-chevron-left"></i> Önceki
+            </button>
             <span id="pageInfo">Sayfa 1</span>
-            <button id="nextPageBtn">Sonraki</button>
+            <button id="nextPageBtn">
+                Sonraki <i class="fa-solid fa-chevron-right"></i>
+            </button>
         </div>
 
         <div>Yüklenen Özellik Sayısı: <span id="featureCount">0</span></div>

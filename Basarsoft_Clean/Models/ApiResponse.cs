@@ -1,4 +1,4 @@
-﻿namespace Basarsoft_Clean.Models
+﻿namespace API.Models
 {
     public class ApiResponse<T>
     {

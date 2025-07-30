@@ -1,8 +1,8 @@
-﻿using Basarsoft_Clean.Models;
-using Basarsoft_Clean.Services;
+﻿using API.Models;
+using API.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Basarsoft_Clean.Controllers
+namespace API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

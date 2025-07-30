@@ -1,10 +1,10 @@
-﻿using Basarsoft_Clean.DAL;
-using Basarsoft_Clean.DAL.Repositories;
-using Basarsoft_Clean.Helpers;
-using Basarsoft_Clean.Models;
+﻿using API.DAL;
+using API.DAL.Repositories;
+using API.Helpers;
+using API.Models;
 using NetTopologySuite.Geometries;
 using NetTopologySuite.IO;
-namespace Basarsoft_Clean.Services
+namespace API.Services
 {
     public class FeatureService : IFeatureService
     {

@@ -1,7 +1,7 @@
-﻿using Basarsoft_Clean.DAL;
-using Basarsoft_Clean.Models;
+﻿using API.DAL;
+using API.Models;
 
-namespace Basarsoft_Clean.Services
+namespace API.Services
 {
     public interface IFeatureService
     {
